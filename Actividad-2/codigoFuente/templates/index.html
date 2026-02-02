@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Route</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            100: '#F5EBE0', // Crema
+                            300: '#D6CCC2',
+                            500: '#B08968', // Tostado claro
+                            700: '#7F5539', // Tostado medio
+                            900: '#3C2A21', // Café oscuro intenso
+                        },
+                        amber: {
+                            500: '#D97706', // Acento
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            /* Imagen de fondo genérica de café, puedes cambiarla por una foto de TJ */
+            background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-coffee-100">
+
+    <nav class="absolute top-0 w-full p-6 flex justify-between items-center z-10">
+        <div class="text-white font-bold text-2xl tracking-wider">
+            <i class="fas fa-mug-hot mr-2"></i>TJ CAFÉ GUIDE
+        </div>
+        <div>
+            <a href="#" class="text-white hover:text-amber-500 font-medium transition duration-300">Login</a>
+        </div>
+    </nav>
+
+    <section class="hero-bg h-screen relative flex items-center justify-center">
+        <div class="absolute inset-0 bg-coffee-900 opacity-60"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Descubre el Verdadero <br>
+                <span class="text-amber-500">Café de Tijuana</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light">
+                Olvídate de las cadenas. Explora la guía curada de las mejores barras de especialidad y tostadores locales.
+            </p>
+            
+            <a href="/mapa" class="inline-block bg-amber-500 hover:bg-amber-600 text-white text-lg font-bold py-4 px-10 rounded-full shadow-lg transform transition hover:scale-105 duration-300">
+                <i class="fas fa-map-marked-alt mr-2"></i> Explorar Mapa
+            </a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-coffee-900 mb-4">¿Por qué usar esta guía?</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center p-6 rounded-xl hover:shadow-xl transition duration-300 border border-transparent hover:border-coffee-100">
+                    <div class="text-amber-500 text-5xl mb-6">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-coffee-900 mb-4">Curaduría Local</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Seleccionamos solo cafeterías independientes. Apoya al talento y a los baristas de Tijuana.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl hover:shadow-xl transition duration-300 border border-transparent hover:border-coffee-100">
+                    <div class="text-amber-500 text-5xl mb-6">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-coffee-900 mb-4">Métodos Artesanales</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Encuentra lugares que ofrecen V60, Chemex, AeroPress y Cold Brew de alta calidad.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-xl hover:shadow-xl transition duration-300 border border-transparent hover:border-coffee-100">
+                    <div class="text-amber-500 text-5xl mb-6">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-coffee-900 mb-4">Ambiente Ideal</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Filtra tu búsqueda: ¿Necesitas WiFi rápido para trabajar o un lugar íntimo para platicar?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-coffee-900 text-coffee-100 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2">Hecho con <i class="fas fa-heart text-red-500"></i> y mucha cafeína en Tijuana.</p>
+            <p class="text-sm opacity-60">&copy; 2024 Tijuana Café Guide. Fase 1 del Proyecto.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
